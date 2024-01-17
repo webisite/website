@@ -1,0 +1,29 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.slider-container {
+    
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: px;
+    width: 300px;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    margin-top: 100px;
+    
+}
+
+.slider img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+/* ... (other styles) */

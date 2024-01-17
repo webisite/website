@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Bootstrap 5 | Navbar with Topbar</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="slider.css">
+    <link rel="stylesheet" href="hero.css">
+    <link  href="barbering.html">
+    <link  href="beautyProducts.html">
+    <link  href="index.html">
+    <title>Cut & Scissors</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="styles.css" rel="stylesheet">
+
+    <style>
+        /* Navbar styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav {
+            background-color: #3498db; /* Navbar background color */
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-brand {
+            
+            text-decoration: none;
+            font-size: 1.5em;
+            font-weight: bolder;
+            color: #fff;
+        }
+       
+
+        .navbar-menu {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar-item {
+            margin-right: 20px;
+        }
+
+        .navbar-item a {
+            color: #fff;
+            padding: 5px;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .navbar-item a:hover {
+            color: #ecf0f1; /* Change color on hover */
+            background-color: #1669a0;
+            
+            border-radius: 4px;
+        }
+
+        /* Hamburger icon */
+        .navbar-toggler {
+             /* Hide by default on larger screens */
+            font-size: 1.5em;
+            cursor: pointer;
+            color: #ecf0f1;
+        }
+
+        /* Mobile menu */
+        .navbar-menu {
+            flex-direction: column;
+            align-items: flex-start;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            background-color: #2980b9; /* Mobile menu background color */
+            width: 100%;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: none; /* Hide initially on small screens */
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .navbar-menu.active {
+            display: flex; /* Show when active class is present */
+            opacity: 1;
+        }
+
+        .navbar-item {
+            margin: 10px 0;
+            opacity: 0; /* Hide initially */
+            animation: fadeIn 0.5s forwards;
+            animation-delay: 0.2s; /* Delay for a smoother appearance */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive styles */
+        @media only screen and (max-width: 768px) {
+            .navbar-toggler {
+                display: block; /* Show on small screens */
+            }
+        }
+        .heading
+        {
+            font-family:'Arial';
+            font-weight: bold;
+            margin-top: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1669a0;
+
+        }
+        .heading1
+        {
+            font-family:'Arial';
+            font-weight: bold;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1669a0;
+        }
+        .background
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           
+            flex-wrap: wrap;
+            width:300px;
+        }
+        .main-heading
+        {
+            font-size: 48px;
+            
+        }
+    </style>
+
+</head>
+<body>
+    <nav>
+        <div class="navbar-container">
+            <a href="#" class="navbar-brand">Cut & Scissors</a>
+            <i class="fas fa-bars navbar-toggler"></i>
+            <ul class="navbar-menu">
+                <li class="navbar-item"><a href="index.html">Home</a></li>
+                <li class="navbar-item"><a href="PetGrooming.html">Pet Grooming</a></li>
+                <li class="navbar-item"><a href="barbering.html">Barbering</a></li>
+                <li class="navbar-item"><a href="beautyProducts.html">Beauty</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+         <header class="hero-section">
+        <!-- Content for the hero section goes here -->
+        <div class="main-heading"> <span style="font-size: 72px; color:red; font-weight:bold" >Cut</span> & Scissors</div>
+        
+    </header>
+
+   
+
+        <div class="heading">
+            <h1>Razor scissors</h1> 
+            
+        </div>
+        
+        
+
+    <div class="container product-container">
+        <!-- Item 1 -->
+        <div class="product-item">
+            <a href="details.html?item=item1">
+                <img src="images/1.jpeg" alt="Item 1">
+                <h3>BK-24-01</h3>
+                <p>Rs 1000</p>
+                
+            </a>
+        </div>
+
+        <!-- Item 2 - Copy and Paste for additional items -->
+        <div class="product-item">
+            <a href="details.html?item=item2">
+                <img src="images/2.jpeg" alt="Item 2">
+                <h3>Scissor 2</h3>
+                <p>Rs 1400</p>
+            </a>
+        </div>
+        <div class="product-item">
+            <a href="details.html?item=item3">
+                <img src="images/3.jpeg" alt="Item 4">
+                <h3>Scissor 3</h3>
+                <p>Rs 1405</p>
+            </a>
+        </div>
+        <div class="product-item">
+            <a href="details.html?item=item4">
+                <img src="images/4.jpeg" alt="Item 4">
+                <h3>Scissor 4</h3>
+                <p>Rs 1405</p>
+            </a>
+        </div>
+        <div class="product-item">
+            <a href="details.html?item=item5">
+                <img src="images/5.jpeg" alt="Item 5">
+                <h3>Scissor 5</h3>
+                <p>Rs 1405</p>
+            </a>
+        </div>
+        <div class="product-item">
+            <a href="details.html?item=item6">
+                <img src="images/6.jpeg" alt="Item 6">
+                <h3>Scissor 6</h3>
+                <p>Rs 1405</p>
+            </a>
+        </div>
+        <div class="product-item">
+            <a href="details.html?item=item7">
+                <img src="images/7.jpeg" alt="Item 7">
+                <h3>Scissor 7</h3>
+                <p>Rs 1405</p>
+            </a>
+        </div>
+        <div class="product-item">
+            <a href="details.html?item=item8">
+                <img src="images/8.jpeg" alt="Item 8">
+                <h3>Scissor 8</h3>
+                <p>Rs 1405</p>
+            </a>
+        </div>
+
+
+        <!-- Add more items as needed -->
+    </div>
+
+    <div class="slider-container">
+        <div class="slider">
+            <img src="images/1.jpeg" alt="Image 1">
+            <img src="images/2.jpeg" alt="Image 2">
+            <img src="images/3.jpeg" alt="Image 3">
+            <img src="images/4.jpeg" alt="Image 4">
+            <img src="images/5.jpeg" alt="Image 5">
+            <img src="images/6.jpeg" alt="Image 6">
+            <img src="images/7.jpeg" alt="Image 7">
+            <img src="images/8.jpeg" alt="Image 8">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Toggle mobile menu
+        document.addEventListener("DOMContentLoaded", function() {
+            const navbarMenu = document.querySelector('.navbar-menu');
+            const navbarToggler = document.querySelector('.navbar-toggler');
+            navbarToggler.addEventListener('click', function() {
+                navbarMenu.classList.toggle('active');
+            });
+        });
+    </script>
+    <script>// script.js
+
+        const slider = document.querySelector('.slider');
+        let isTransitioning = false;
+        
+        function nextSlide() {
+            if (!isTransitioning) {
+                isTransitioning = true;
+                slider.style.transition = 'transform 0.5s ease-in-out';
+                slider.style.transform = 'translateX(-100%)';
+            }
+        }
+        
+        function handleTransitionEnd() {
+            slider.style.transition = 'none';
+            slider.style.transform = 'translateX(0)';
+            isTransitioning = false;
+        }
+        
+        slider.addEventListener('transitionend', handleTransitionEnd);
+        
+        // Auto advance to the next slide every 3 seconds
+        setInterval(nextSlide, 3000);
+        </script>
+</body>
+</html>
